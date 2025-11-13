@@ -19,7 +19,7 @@ class FaissDB:
             vectors = vectors.reshape(1, -1)
         self.index.add(vectors.astype("float32"))
 
-    def search(self, query_vector: np.ndarray, k: int = 4) -> list[int]:
+    def search(self, query_vector: np.ndarray, k: int = 5) -> list[int]:
         _, I = self.index.search(query_vector.reshape(1, -1).astype("float32"), k)
         return I[0].tolist()
 
