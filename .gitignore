@@ -1,0 +1,5 @@
+*.conf
+*.sql
+__pycache__
+*.pkl
+*.index
